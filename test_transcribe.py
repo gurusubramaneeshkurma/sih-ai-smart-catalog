@@ -41,3 +41,17 @@ interaction = client.interactions.create(
 print("5. Transcription successful!")
 print("TRANSCRIPTION:")
 print(interaction.output_text)
+
+from ai.voice import voice_assistant
+
+audio_path = "api/WhatsApp Audio 2026-09-09 at 13.02.15.mp3"
+
+result = voice_assistant(audio_path)
+
+print("\n========== VOICE ASSISTANT RESULT ==========")
+print("Language:", result["language"])
+print("Language code:", result["language_code"])
+print("Transcription:", result["transcription"])
+print("AI Response:", result["response"])
+print("Audio file:", result["audio_file"])
+print("============================================")
